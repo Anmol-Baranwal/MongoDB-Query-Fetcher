@@ -111,7 +111,7 @@ The `pages/api/query` folder contains several files that define the endpoints fo
 
 ![Opening Screen](https://user-images.githubusercontent.com/74038190/234667279-1f295485-4fe2-4b7b-a081-9306b3aa8469.png)
 
-![Displayed Data in Table](https://user-images.githubusercontent.com/74038190/234675787-9a70ed23-5ead-4683-b4b7-105729041169.png)
+![Display Fetched Data from DB](https://user-images.githubusercontent.com/74038190/234681683-bc889682-c990-4f25-83f0-bd5d5056cc98.png)
 
 
 <hr>
