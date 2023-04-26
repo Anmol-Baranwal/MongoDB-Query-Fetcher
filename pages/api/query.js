@@ -1,97 +1,81 @@
 import User from "@/models/userModel";
 
-const fetchData1 = async () => {
-  const BASE_URL = "api/query/";
-  const response = await fetch(`https://${BASE_URL}/${url}`);
-
-  return await response.json();
+const fetchData = async (url, results) => {
+  const data = await fetchQuery(url, results);
+  return data;
 };
 
 // Routes for fetching the required data
-export default async function bmwMercedesIncome(req, res) {
+export async function fetchQuery(req, res, results, url) {
   try {
-    let query = {
-      $and: [
-        { car: { $in: ["BMW", "Mercedes-Benz"] } },
-        { income: { $lt: "5" } },
-      ],
-    };
-    // we can also use: { $or: [ { car: "BMW", income: {$lt: "$5.00"} }, { car: "Mercedes-Benz", income: {$lt: "$5.00"} } ] }
-    const results = await User.find(query);
+    const data = fetchData(url);
     res.status(200).json(results);
   } catch (error) {
     console.log(error);
-    res
-      .status(500)
-      .send("Error while fetching data in" + bmwMercedesIncome.name);
+    res.status(500).send("Error while fetching data in" + url);
   }
 }
 
-export async function malePhonePrice(req, res) {
-  try {
-    let query = {
-      $and: [{ gender: "Male" }, { phone_price: { $gt: "10000" } }],
-    };
+export const bmwMercedesIncome = async () => {
+  // we can also use: { $or: [ { car: "BMW", income: {$lt: "$5.00"} }, { car: "Mercedes-Benz", income: {$lt: "$5.00"} } ] }
+  let query = {
+    $and: [
+      { car: { $in: ["BMW", "Mercedes-Benz"] } },
+      { income: { $lt: "5" } },
+    ],
+  };
+  const results = await User.find(query);
+  const url = "bmwMercedesIncome";
 
-    const results = await User.find(query);
-    res.status(200).json(results);
-  } catch (error) {
-    console.log(error);
-    res.status(500).send("Error while fetching data in" + malePhonePrice.name);
-  }
-}
+  return fetchQuery(results, url);
+};
 
-export async function lastNameCharacterLength(req, res) {
-  try {
-    let query = {
-      lname: { $regex: "^M" },
-      quote: { $gt: 15 },
-      email: { $regex: ".*M.*$" },
-    };
+export const malePhonePrice = async () => {
+  let query = {
+    $and: [{ gender: "Male" }, { phone_price: { $gt: "10000" } }],
+  };
+  const results = await User.find(query);
+  const url = "malePhonePrice";
 
-    const results = await User.find(query);
-    res.status(200).json(results);
-  } catch (error) {
-    console.log(error);
-    res
-      .status(500)
-      .send("Error while fetching data in" + lastNameCharacterLength.name);
-  }
-}
+  return fetchQuery(results, url);
+};
 
-export async function bmwMercedesAudiEmailNoDigit(req, res) {
-  try {
-    let query = {
-      car: { $in: ["BMW", "Mercedes-Benz", "Audi"] },
-      email: { $not: { $regex: "\\d" } },
-    };
+export const lastNameCharacterLength = async () => {
+  let query = {
+    lname: { $regex: "^M" },
+    quote: { $gt: 15 },
+    email: { $regex: ".*M.*$" },
+  };
+  const results = await User.find(query);
+  const url = "malePhonePrice";
 
-    const results = await User.find(query);
-    res.status(200).json(results);
-  } catch (error) {
-    console.log(error);
-    res
-      .status(500)
-      .send("Error while fetching data in" + bmwMercedesAudiEmailNoDigit.name);
-  }
-}
+  return fetchQuery(results, url);
+};
 
-export async function top10Cities(req, res) {
-  try {
-    const results = await User.aggregate([
-      {
-        $group: {
-          _id: "$city",
-          users_count: { $sum: 1 },
-          avg_income: { $avg: "$income" },
-        },
+export const bmwMercedesAudiEmailNoDigit = async () => {
+  let query = {
+    car: { $in: ["BMW", "Mercedes-Benz", "Audi"] },
+    email: { $not: { $regex: "\\d" } },
+  };
+  const results = await User.find(query);
+  const url = "malePhonePrice";
+
+  return fetchQuery(results, url);
+};
+
+export const top10Cities = async () => {
+  const results = await User.aggregate([
+    {
+      $group: {
+        _id: "$city",
+        users_count: { $sum: 1 },
+        avg_income: { $avg: "$income" },
       },
-      { $sort: { users_count: -1 } },
-      { $limit: 10 },
-    ]);
-    res.status(200).json(results);
-  } catch (error) {
-    console.log(error);
-    res.status(500).send("Error while fetching data in" + top10Cities.name);
-  }
-}
+    },
+    { $sort: { users_count: -1 } },
+    { $limit: 10 },
+  ]);
+  const url = "malePhonePrice";
+
+  return fetchQuery(results, url);
+};
