@@ -18,7 +18,7 @@ https://internship-full-stack-project-8m5rb54k7-anmol-baranwal.vercel.app/
 
 ## ✅ Guidelines to run web app locally
 
-- For this app to work, you need to configure the following environment variables in your .env file in the root directory.
+- For this app to work, you need to configure the following environment variables in your .env.local file in the root directory. No need to use `NEXT_PUBLIC` since the credentials are not exposed to the browser..
 
 (These are MongoDB Atlas cluster credentials)
 
@@ -111,6 +111,17 @@ The `pages/api/query` folder contains several files that define the endpoints fo
 
 ![Screenshot (3643)](https://user-images.githubusercontent.com/74038190/234667279-1f295485-4fe2-4b7b-a081-9306b3aa8469.png)
 
+<hr>
+
+## References
+
+- MongoDB Atlas: https://cloud.mongodb.com/v2/64463b7e3b1b9f39c0c957fb#/clusters
+- Query Documents MongoDB: https://www.mongodb.com/docs/manual/tutorial/query-documents/
+- Installation of MongoDB 6.0: https://stackoverflow.com/questions/73081708/mongo-exe-not-installed-in-version-6-0-0
+- MongoDB Compass: https://www.mongodb.com/products/compass
+- Postman: https://www.postman.com/downloads/
+- NPM Package: https://www.npmjs.com/
+- Next.js Documentation: https://nextjs.org/docs/basic-features/pages
 
 <!-- ## Getting Started
 
