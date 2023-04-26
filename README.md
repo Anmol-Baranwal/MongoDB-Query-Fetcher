@@ -18,7 +18,7 @@ https://internship-full-stack-project-8m5rb54k7-anmol-baranwal.vercel.app/
 
 ## ✅ Guidelines to run web app locally
 
-- For this app to work, you need to configure the following environment variables in your .env file in the root directory.
+- For this app to work, you need to configure the following environment variables in your .env.local file in the root directory. No need to use `NEXT_PUBLIC` since the credentials are not exposed to the browser..
 
 (These are MongoDB Atlas cluster credentials)
 
