@@ -12,7 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 This project is hosted on [Vercel Platform](https://vercel.com/). Visit the following link to view the web application.
 
 ```
-https://internship-full-stack-project-8m5rb54k7-anmol-baranwal.vercel.app/
+https://internship-full-stack-project.vercel.app/
 ```
 <hr>
 
