@@ -1,0 +1,33 @@
+.table {
+  padding: 3rem 0rem 3rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: var(--accent-100);
+  text-align: left;
+}
+
+.tableheading {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-300);
+}
+
+.tablerow:hover {
+  background-color: var(--primary-300);
+  color: var(--bg-100);
+}
+
+.tableheading:first-child {
+  padding-left: 0.5rem;
+}
+
+.td:first-child {
+  padding-top: 2rem;
+}
+
+.tablerow {
+  padding-left: 2rem;
+}

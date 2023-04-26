@@ -5,30 +5,31 @@ const Table = ({ userData }) => {
     <table className={styles.table}>
       <thead>
         <tr>
-          <th>id</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Gender</th>
-          <th>Income ($)</th>
-          <th>City</th>
-          <th>Car</th>
-          <th>Quote</th>
-          <th>Phone Price</th>
+          {/* <th className={styles.tableheading}>id</th>
+          <th className={styles.tableheading}>First Name</th>
+          <th className={styles.tableheading}>Last Name</th> */}
+          <th className={styles.tableheading}>Email</th>
+          <th className={styles.tableheading}>Gender</th>
+          <th className={styles.tableheading}>Income ($)</th>
+          <th className={styles.tableheading}>City</th>
+          <th className={styles.tableheading}>Car</th>
+          <th className={styles.tableheading}>Quote</th>
+          <th className={styles.tableheading}>Phone Price</th>
         </tr>
       </thead>
       <tbody>
         {userData?.map((user) => (
           <tr key={user.id}>
-            <td>{user.firstName}</td>
-            <td>{user.lastName}</td>
-            <td>{user.email}</td>
-            <td>{user.gender}</td>
-            <td>{user.income}</td>
-            <td>{user.city}</td>
-            <td>{user.car}</td>
-            <td>{user.quote}</td>
-            <td>{user.phone_price}</td>
+            {/* <td className={styles.tablerow}>{user.id}</td>
+            <td className={styles.tablerow}>{user.firstName}</td>
+            <td className={styles.tablerow}>{user.lastName}</td> */}
+            <td className={styles.tablerow}>{user.email}</td>
+            <td className={styles.tablerow}>{user.gender}</td>
+            <td className={styles.tablerow}>{user.income}</td>
+            <td className={styles.tablerow}>{user.city}</td>
+            <td className={styles.tablerow}>{user.car}</td>
+            <td className={styles.tablerow}>{user.quote}</td>
+            <td className={styles.tablerow}>{user.phone_price}</td>
           </tr>
         ))}
       </tbody>
