@@ -47,7 +47,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/static/github.svg" />
       </Head>
-      <h1 className={styles.heading}>User Data</h1>
+      <h1 className={styles.heading}>
+        <span className={styles.heading2}>API</span> Data
+      </h1>
+      <p className={styles.subheading}>Select any choice to fetch data</p>
       <select onChange={handleApiChange} className={styles.menu}>
         <option value="">--Select an API--</option>
         <option value="1">
@@ -70,7 +73,9 @@ export default function Home() {
           and their average income.
         </option>
       </select>
-      {!!userResults.length && <Table userData={userResults} />}
+      <div className={styles.table}>
+        {!!userResults.length && <Table userData={userResults} />}
+      </div>
     </div>
   );
 }
