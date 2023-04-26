@@ -1,4 +1,79 @@
+
+# FullStack Fetch Data Project
+
+We can choose any option to fetch data accordingly based on 5 different queries. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+<hr>
+
+## :fire: Deployed Link ##
+
+This project is hosted on [Vercel Platform](https://vercel.com/). Visit the following link to view the web application.
+
+```
+
+```
+<hr>
+
+## ✅ Guidelines to run web app locally
+
+- For this app to work, you need to configure the following environment variables in your .env file in the root directory.
+
+(These are MongoDB Atlas cluster credentials)
+
+```
+MONGODB_USERNAME=<value>
+MONGODB_PASSWORD=<value>
+```
+
+- Use these commands to run the application
+
+```bash
+# to install dependencies 
+npm install
+
+# to run the server
+npm run dev
+
+```
+
+- Open `http://localhost:3000` with your browser to see the application.
+
+<br>
+
+## :open_file_folder: Folder Structure
+
+A quick look at the folder structure of this project.
+
+    .
+    |──node_modules
+    |──next.config.json
+    |──jsconfig.json
+    |──.eslintrc.json
+    |──package-lock.json
+    |──package.json
+    ├── components
+        |───table
+            |───table.js
+            |───table.module.css
+    ├── data
+        |───stats.json
+    └── models
+        |───userModel.js
+    └── pages
+        |───api
+            |───test
+            |───query
+    └── public
+        |───fonts
+    └── styles
+        |───stats.json
+    └── util
+        |───connectMongo.js
+        |───connectUrl.js
+    
+
 
 ## Getting Started
 
