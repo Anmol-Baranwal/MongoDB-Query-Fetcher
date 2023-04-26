@@ -83,12 +83,13 @@ A quick look at the folder structure of this project.
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
 
 <hr>
 
 ## How I made this?
 
-This is a web application built using Next.js, MongoDB, and Mongoose. The application allows users to perform queries on a MongoDB database and display the results in a table.
+This is a web application built using Next.js, MongoDB, and Mongoose. The application enables users to perform queries on a MongoDB database and displays the results in a table. I also used MongoDB Compass and Postman to verify the queries and API requests.
 
 The `index.js` file in the `pages` folder contains the code for the homepage of the application. It imports the `table` component and the `Home.module.css` styles. The homepage contains a drop-down menu with five options, each of which triggers a different query to the MongoDB database when selected.
 
