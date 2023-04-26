@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Table from "@/components/table/table";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const [userResults, setUserResults] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await fetch("/api/test/loadDB");
+        const data = await response.json();
+        console.log(data); // to verify that data has been loaded successfully
+      } catch (error) {
+        console.log("error in loading data " + error);
+      }
+    };
+
+    loadData();
+  }, []);
 
   const handleApiChange = async (e) => {
     try {
