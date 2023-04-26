@@ -1,5 +1,5 @@
 .table {
-  padding: 3rem 0rem 3rem 2rem;
+  padding: 3rem 1rem 3rem 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
@@ -9,7 +9,7 @@
 
 .tableheading {
   text-align: left;
-  padding: 0.5rem;
+  padding-left: 1.5rem;
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--primary-300);
@@ -30,4 +30,5 @@
 
 .tablerow {
   padding-left: 2rem;
+  padding-top: 0.5rem;
 }
