@@ -15,12 +15,12 @@ Code:
 > Check [here](https://github.com/Anmol-Baranwal/Internship-FullStack-Project/blob/main/pages/api/query/bmwMercedesIncome.js)
 
 ```php
-{
+db.collection.find({
   $and: [
     { car: { $in: ["BMW", "Mercedes-Benz"] } }, // Query for users who have cars of brand BMW or Mercedes-Benz
     { income: { $lt: "5" } }, // Query for users with income less than $5 USD
   ],
-};
+});
 ```
 
 Explanation: <br>
@@ -43,13 +43,12 @@ Code:
 > Check [here](https://github.com/Anmol-Baranwal/Internship-FullStack-Project/blob/main/pages/api/query/malePhonePrice.js)
 
 ```php
-{
+db.collection.find({
   $and: [
     { gender: "Male" }, // Query for users with gender equal to "Male"
     { phone_price: { $gt: "10000" } }, // Query for users with phone_price greater than "10000"
   ],
-}
-
+});
 ```
 
 Explanation: <br>
@@ -73,10 +72,10 @@ Code:
 > Check [here](https://github.com/Anmol-Baranwal/Internship-FullStack-Project/blob/main/pages/api/query/AudiEmailNoDigit.js)
 
 ```php
-{
+db.collection.find({
   car: { $in: ["BMW", "Mercedes-Benz", "Audi"] }, // Query for users who have cars of brand BMW, Mercedes-Benz or Audi
   email: { $not: { $regex: "\\d" } }, // Query for users whose email does not contain digits
-};
+});
 ```
 
 Explanation: <br>
