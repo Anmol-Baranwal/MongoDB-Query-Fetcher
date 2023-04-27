@@ -28,11 +28,11 @@ const lastNameCharacterLength = async (req, res) => {
             $regex: "^M",
           },
           $expr: {
-            $lt: [
+            $gt: [
               {
                 $strLenCP: "$quote",
               },
-              40,
+              15,
             ],
           },
           last_name_regex: true,
