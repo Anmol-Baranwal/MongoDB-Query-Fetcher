@@ -1,3 +1,8 @@
+.tableheading,
+.tablecell {
+  border: 0.1px solid var(--primary-300);
+}
+
 .table {
   padding: 3rem 1rem 3rem 1rem;
   font-family: "Poppins", sans-serif;
@@ -9,7 +14,7 @@
 
 .tableheading {
   text-align: left;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--primary-300);
@@ -18,15 +23,12 @@
 .tablecell {
   padding-left: 2rem;
   padding-top: 0.5rem;
+  padding-right: 1.5rem;
 }
 
 .tablerow:hover {
   background-color: var(--primary-300);
   color: var(--bg-100);
-}
-
-.tableheading:first-child {
-  padding-left: 0.5rem;
 }
 
 .td:first-child {
