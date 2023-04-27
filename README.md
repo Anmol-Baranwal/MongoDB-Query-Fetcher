@@ -3,8 +3,11 @@
 
 > :information_source: This is a web application built using Next.js, MongoDB, and Mongoose.
 
-The application enables users to perform queries on a MongoDB database and displays the results in a table. It includes a homepage with a drop-down menu that triggers different queries to the MongoDB database. <br>
-The major tech stack includes Next.js for the frontend, MongoDB and Mongoose for the database, and various API endpoints for querying the data. Additionally, the project includes a test data loader, a User model definition, and utility files for connecting to the MongoDB database.
+The application enables users to perform queries on a MongoDB database and displays the results in a table. It includes a homepage with a drop-down menu that triggers different queries to the MongoDB database. 
+
+The major tech stack includes Next.js for the frontend, MongoDB and Mongoose for the database, and various API endpoints for querying the data. Additionally, the project includes a test data loader, a User model definition, and utility files for connecting to the MongoDB database. 
+
+For further information on queries that are retrieving data, you can refer [here](Queries_Explanation.md)
 
 <hr>
 
@@ -112,7 +115,9 @@ The `pages/api/query` folder contains several files that define the endpoints fo
 
 ![Opening Screen](https://user-images.githubusercontent.com/74038190/234667279-1f295485-4fe2-4b7b-a081-9306b3aa8469.png)
 
-![Display Fetched Data from DB](https://user-images.githubusercontent.com/74038190/234681683-bc889682-c990-4f25-83f0-bd5d5056cc98.png)
+![Display Fetched Data from DB using Query5](https://user-images.githubusercontent.com/74038190/234885539-7963659f-b427-47f3-9edc-fc1b5516ee5f.png)
+
+![Display Fetched Data from DB using Query2](https://user-images.githubusercontent.com/74038190/234885551-e6ca6171-0242-4d51-9a4c-f988375bbf30.png)
 
 
 <hr>
