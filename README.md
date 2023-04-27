@@ -1,9 +1,10 @@
 
-# <img src="https://user-images.githubusercontent.com/74038190/221857969-f37e1717-1470-4fe4-abb5-88b334cf64ea.png" alt="icon of todo list" width="45" /> FullStack Fetch Data Project
+# <img src="https://user-images.githubusercontent.com/74038190/221857969-f37e1717-1470-4fe4-abb5-88b334cf64ea.png" alt="icon of todo list" width="45" /> Full Stack MongoDB Query Fetcher
 
-> :information_source: This is a web application built using Next.js, MongoDB, and Mongoose. The application allows users to perform queries on a MongoDB database and display the results in a table.
+> :information_source: This is a web application built using Next.js, MongoDB, and Mongoose.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The application enables users to perform queries on a MongoDB database and displays the results in a table. It includes a homepage with a drop-down menu that triggers different queries to the MongoDB database. <br>
+The major tech stack includes Next.js for the frontend, MongoDB and Mongoose for the database, and various API endpoints for querying the data. Additionally, the project includes a test data loader, a User model definition, and utility files for connecting to the MongoDB database.
 
 <hr>
 
