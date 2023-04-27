@@ -6,12 +6,19 @@ const top10Cities = async (req, res) => {
       {
         $group: {
           _id: "$city",
-          users_count: { $sum: 1 },
+          count: { $sum: 1 },
           avg_income: { $avg: "$income" },
         },
       },
-      { $sort: { users_count: -1 } },
-      { $limit: 10 },
+      {
+        $sort: {
+          count: -1,
+          avg_income: -1,
+        },
+      },
+      {
+        $limit: 10,
+      },
     ]);
     res.status(200).json(results);
   } catch (error) {
