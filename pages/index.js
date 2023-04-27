@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const [userResults, setUserResults] = useState([]);
+  const [apiSelection, setApiSelection] = useState("");
 
   useEffect(() => {
     const loadData = async () => {
@@ -29,24 +30,30 @@ export default function Home() {
         const response = await fetch("/api/query/bmwMercedesIncome");
         const data = await response.json();
         setUserResults(data);
+        setApiSelection(value);
       } else if (value === "2") {
         const response = await fetch("/api/query/malePhonePrice");
         const data = await response.json();
         setUserResults(data);
+        setApiSelection(value);
       } else if (value === "3") {
         const response = await fetch("/api/query/AudiEmailNoDigit");
         const data = await response.json();
         setUserResults(data);
+        setApiSelection(value);
       } else if (value === "4") {
         const response = await fetch("/api/query/lastNameCharacterLength");
         const data = await response.json();
         setUserResults(data);
+        setApiSelection(value);
       } else if (value === "5") {
         const response = await fetch("/api/query/top10Cities");
         const data = await response.json();
         setUserResults(data);
+        setApiSelection(value);
       } else {
         setUserResults([]);
+        setApiSelection("");
       }
     } catch (error) {
       console.log("error in handling api change " + error);
@@ -88,7 +95,9 @@ export default function Home() {
         </option>
       </select>
       <div className={styles.table}>
-        {!!userResults.length && <Table userData={userResults} />}
+        {!!userResults.length && (
+          <Table userData={userResults} apiSelection={apiSelection} />
+        )}
       </div>
     </div>
   );

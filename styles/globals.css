@@ -59,6 +59,8 @@ body {
   --accent-100: #f5f5f5;
   --bg-100: #1d1f21;
   --bg-200: #2c2e30;
+
+  background-color: var(--bg-100);
 }
 
 @font-face {

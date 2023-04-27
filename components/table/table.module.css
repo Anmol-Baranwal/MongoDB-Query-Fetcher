@@ -15,6 +15,11 @@
   color: var(--primary-300);
 }
 
+.tablecell {
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+
 .tablerow:hover {
   background-color: var(--primary-300);
   color: var(--bg-100);
@@ -26,9 +31,4 @@
 
 .td:first-child {
   padding-top: 2rem;
-}
-
-.tablerow {
-  padding-left: 2rem;
-  padding-top: 0.5rem;
 }
