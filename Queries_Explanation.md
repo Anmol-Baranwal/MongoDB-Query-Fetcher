@@ -2,8 +2,6 @@
 
 :information_source: You can test the queries online using tools such as [MongoDB Playground](https://mongoplayground.net/) or offline tool [MongoDB Compass](https://www.mongodb.com/products/compass). To get a sample JSON data, please visit [this link](https://github.com/Anmol-Baranwal/Internship-FullStack-Project/blob/main/data/stats.json).
 
-Get the json sample data [here].
-
 <hr>
 
 ## Query1
