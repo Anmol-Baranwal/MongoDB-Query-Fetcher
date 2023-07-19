@@ -24,7 +24,7 @@ export default function Home() {
   const handleApiChange = async (e) => {
     try {
       const { value } = e.target;
-      console.log({ value });
+      console.log(`Option Choosed: ${value}`);
 
       if (value === "1") {
         const response = await fetch("/api/query/bmwMercedesIncome");

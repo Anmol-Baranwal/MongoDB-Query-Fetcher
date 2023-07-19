@@ -2,24 +2,23 @@ import connectMongo from "@/util/connectMongo";
 import User from "@/models/userModel";
 import data from "@/data/stats.json";
 
-/**
- * @param {import('next').NextApiRequest} req
- * @param {import('next').NextApiResponse} res
- */
-
 export default async function addUser(req, res) {
   try {
     await connectMongo(); // connecting mongo
 
-    // we can also use create, but this will reduce the total round of trips, and is much efficient
-    await User.deleteMany({});
-    await User.insertMany(data);
+    const existingUsers = await User.find({});
 
-    // await User.create(data);
+    if (existingUsers.length === 0) {
+      // await User.create(data);
+      await User.deleteMany({});
+      await User.insertMany(data);
+      // we can also use create, but this will reduce the total round of trips, and is much efficient
+      console.log("Data loaded successfully"); // use this to see whether the data loaded successfully
+    }
 
-    // console.log("Data loaded successfully");  // use this to see whether the data loaded successfully
     const users = await User.find({});
-    console.log(users);
+
+    // console.log(users);   // list of users
 
     res.status(200).json({ users });
   } catch (error) {
