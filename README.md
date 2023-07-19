@@ -16,7 +16,7 @@ For further information on queries that are retrieving data, you can refer [here
 This project is hosted on [Vercel Platform](https://vercel.com/). Visit the following link to view the web application.
 
 ```
-https://internship-full-stack-project.vercel.app/
+https://mongodb-query-fetcher.vercel.app/
 ```
 <hr>
 
