@@ -113,11 +113,19 @@ The `pages/api/query` folder contains several files that define the endpoints fo
 
 ## 🖥️ The Interface
 
-![Opening Screen](https://user-images.githubusercontent.com/74038190/234667279-1f295485-4fe2-4b7b-a081-9306b3aa8469.png)
+> Starting Interface
+![Starting Interface](https://user-images.githubusercontent.com/74038190/234667279-1f295485-4fe2-4b7b-a081-9306b3aa8469.png)
 
+> Display Fetched Data from DB using Query5
 ![Display Fetched Data from DB using Query5](https://user-images.githubusercontent.com/74038190/234885539-7963659f-b427-47f3-9edc-fc1b5516ee5f.png)
 
+> Display Fetched Data from DB using Query2
 ![Display Fetched Data from DB using Query2](https://user-images.githubusercontent.com/74038190/234885551-e6ca6171-0242-4d51-9a4c-f988375bbf30.png)
+
+> MongoDB Compass Aggregation Stage Pipeline
+![MongoDB Compass Aggregation Stage Pipeline](https://github.com/Anmol-Baranwal/FullStack-MongoDB-Query-Fetcher/assets/74038190/d89040a7-8f65-4b22-96f4-17144d7b211e)
+> MongoDB Compass Aggregation Stage Pipeline 
+![MongoDB Compass Aggregation Stage Pipeline](https://github.com/Anmol-Baranwal/FullStack-MongoDB-Query-Fetcher/assets/74038190/cd66e171-e526-4cd9-ba95-a1a7788642c7)
 
 
 <hr>
